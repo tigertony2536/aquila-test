@@ -1,0 +1,26 @@
+{
+  "name": "aquila-test",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "turbo": "latest",
+    "vitest": "^1.6.0"
+  },
+  "packageManager": "pnpm@9.1.2",
+  "engines": {
+    "node": ">=18"
+  }
+}
