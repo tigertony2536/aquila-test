@@ -1,20 +1,21 @@
-"use client";
+// 'use client';
 
-import { ReactNode } from "react";
-
+import { ReactNode } from 'react';
+import { cn } from '../../utils';
 interface ButtonProps {
   children: ReactNode;
   className?: string;
-  appName: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-export const Button = ({ children, className, appName }: ButtonProps) => {
+const Button = ({ children, className, onClick }: ButtonProps) => {
+  const baseClass = 'py-2 px-6 rounded-full';
+  const supplementaryClass = className;
   return (
-    <button
-      className={className}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
-    >
+    <button className={cn(baseClass, supplementaryClass)} onClick={onClick}>
       {children}
     </button>
   );
 };
+
+export default Button;

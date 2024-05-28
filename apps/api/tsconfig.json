@@ -3,7 +3,13 @@
   "extends": "@repo/typescript-config/base.json",
 
   // You can specify your own include/exclude
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/helper.js",
+    "src/temps.js"
+  ],
   "exclude": ["node_modules"],
   "compilerOptions": { "sourceMap": true, "outDir": "${workspaceFolder}/.dist" }
 }

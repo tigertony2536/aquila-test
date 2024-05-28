@@ -1,8 +1,8 @@
-export function Card({
+function Card({
   className,
   title,
   children,
-  href,
+  href
 }: {
   className?: string;
   title: string;
@@ -23,3 +23,5 @@ export function Card({
     </a>
   );
 }
+
+export default Card;
