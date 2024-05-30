@@ -1,0 +1,54 @@
+# Use postgres/example user/password credentials
+
+version: "3.9"
+services:
+  # PostgreSQL service
+  db:
+    image: postgres:latest
+    environment:
+      # PostgreSQL database
+      POSTGRES_DB: ticket2attraction-db
+      # PostgreSQL username
+      POSTGRES_USER: myuser
+      # SPostgreSQL password
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
+    volumes:
+      # Mount a volume to persist PostgreSQL data
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - custom_network
+    restart: always
+
+  # pgAdmin 4 service
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      # Default email for pgAdmin 4
+      PGADMIN_DEFAULT_EMAIL: admin@email.com
+      # Password for pgAdmin 4
+      PGADMIN_DEFAULT_PASSWORD: adminpassword
+    ports:
+      # Map host port 5050 to container port 80
+      - "5050:80"
+    volumes:
+      # Mount a volume to persist pgAdmin 4 data
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      # Ensure that this service starts after 'db'
+      - db
+    networks:
+      - custom_network
+    restart: always
+
+# bridge driver for the custom network
+networks:
+  custom_network:
+    driver: bridge
+
+volumes:
+  # volume for PostgreSQL
+  postgres_data:
+  # Volume for pgAdmin 4
+  pgadmin_data:
