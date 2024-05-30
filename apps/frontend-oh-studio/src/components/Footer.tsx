@@ -1,5 +1,5 @@
 import { Bar, Button } from '@repo/ui';
-import Icon from './Icon/Icon';
+import Logo from './Logo/Logo';
 
 const barItems = [
   { text: 'twitter', url: '' },
@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="absolute bottom-0 flex h-[100px] w-full justify-between px-8">
       <div className="flex place-items-center">
-        <Icon height={30} />
+        <Logo height={30} />
         <span className="ml-4">© Oli Harris 2023</span>
       </div>
       <div className="flex place-items-center">

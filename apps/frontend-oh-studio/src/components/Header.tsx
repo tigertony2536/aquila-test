@@ -1,4 +1,3 @@
-import { Bar } from '@repo/ui';
 import Navigation from './Navigation';
 
 const NavItem = [
@@ -9,7 +8,7 @@ const NavItem = [
 
 const Header = () => {
   return (
-    <div className="sticky top-0 flex w-full flex-col place-items-center p-8 ">
+    <div className="sticky top-0 z-20 flex w-full flex-col place-items-center p-8">
       <Navigation navItem={NavItem} />
     </div>
   );

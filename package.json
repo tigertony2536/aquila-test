@@ -1,6 +1,10 @@
 {
   "name": "aquila-test",
   "private": true,
+  "prisma": {
+    "schema": "packages/database/prisma/schema.prisma",
+    "seed": "tsx packages/database/src/seed.ts"
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",

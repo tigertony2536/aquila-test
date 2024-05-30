@@ -1,0 +1,36 @@
+{
+  "name": "@repo/database",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/client.ts",
+    "./prisma/prisma.schema": "./src/prisma/schema.prisma"
+  },
+  "scripts": {
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:migrate:reset": "prisma migrate reset",
+    "db:push": "prisma db push",
+    "db:seed": "ts-node src/seed.ts",
+    "dev": "tsup src/* --watch",
+    "format": "prisma format",
+    "generate": "prisma generate",
+    "lint": "eslint . --max-warnings 0",
+    "prebuild": "npm run generate",
+    "predev": "npm run generate",
+    "studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.10.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.13",
+    "eslint": "^8.57.0",
+    "prisma": "^5.14.0",
+    "typescript": "^5.3.3"
+  },
+  "prisma": {
+    "seed": "ts-node src/seed.ts"
+  }
+}

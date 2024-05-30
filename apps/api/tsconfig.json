@@ -3,13 +3,13 @@
   "extends": "@repo/typescript-config/base.json",
 
   // You can specify your own include/exclude
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/helper.js",
-    "src/temps.js"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "src/*.ts"],
   "exclude": ["node_modules"],
-  "compilerOptions": { "sourceMap": true, "outDir": "${workspaceFolder}/.dist" }
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "${workspaceFolder}/.dist",
+    "noEmit": true,
+    "module": "NodeNext",
+    "allowImportingTsExtensions": true
+  }
 }

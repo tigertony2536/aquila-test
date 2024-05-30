@@ -1,7 +1,7 @@
 // 'use client';
 
 import { ReactNode } from 'react';
-import { cn } from '../../utils';
+import { cn } from '@repo/utils';
 interface ButtonProps {
   children: ReactNode;
   className?: string;
@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 
 const Button = ({ children, className, onClick }: ButtonProps) => {
-  const baseClass = 'py-2 px-6 rounded-full';
+  const baseClass = 'py-2 px-6 rounded-full cursor-pointer z-20 text-nowrap';
   const supplementaryClass = className;
   return (
     <button className={cn(baseClass, supplementaryClass)} onClick={onClick}>

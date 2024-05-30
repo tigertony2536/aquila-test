@@ -1,4 +1,5 @@
 import { cn } from '@repo/utils';
+import { Link } from 'react-router-dom';
 
 interface ContactProps {
   className?: string;
@@ -13,7 +14,9 @@ const Contact = ({ className }: ContactProps) => {
       )}
     >
       <p>Let's work together.</p>
-      <p className="text-black/50">Get in touch.</p>
+      <Link to="" className="text-black/50">
+        Get in touch.
+      </Link>
     </div>
   );
 };
