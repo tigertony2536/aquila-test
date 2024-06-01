@@ -1,5 +1,5 @@
 import { Contact } from '../components';
-import { FadeUpBox } from '../components/FadeUpBox';
+import FadeUpBox from '../components/FadeUpBox';
 
 const ContactPage = () => {
   return (

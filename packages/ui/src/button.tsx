@@ -1,5 +1,5 @@
 // 'use client';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { ReactNode } from 'react';
 import { cn } from '@repo/utils';
 interface ButtonProps {

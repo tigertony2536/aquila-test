@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { ReactNode } from 'react';
 import { cn } from '../../utils/src';
 
