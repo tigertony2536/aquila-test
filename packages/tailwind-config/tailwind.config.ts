@@ -1,7 +1,7 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
+import type { Config } from 'tailwindcss';
 
-/** @type {import('tailwindcss').Config} */
-export default {
+// We want each package to be responsible for its own content.
+const config: Omit<Config, 'content'> = {
   content: [
     '../../packages/**/*.{js,ts,jsx,tsx}',
     './**/*.{js,ts,jsx,tsx}',
@@ -14,7 +14,7 @@ export default {
       lg: '1200px'
     },
     fontFamily: {
-      sans: ['Roboto', ...defaultTheme.fontFamily.sans]
+      sans: ['Roboto']
     },
     extend: {
       spacing: {
@@ -33,3 +33,5 @@ export default {
 
   plugins: []
 };
+
+export default config;
