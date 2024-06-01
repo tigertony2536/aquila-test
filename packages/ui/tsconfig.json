@@ -3,9 +3,8 @@
   "compilerOptions": {
     "outDir": "dist",
     "jsx": "react-jsx",
-    "moduleResolution": "NodeNext",
-
+    "moduleResolution": "NodeNext"
   },
-  "include": ["src", "../../apps/frontend-oh-studio/src/components/FadeUpBox.tsx"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }

@@ -15,7 +15,7 @@ const observerOptions = {
   rootMargin: '-50px'
 };
 
-export const FadeUpBox = ({ children, className }: fadeUoBoxProps) => {
+const FadeUpBox = ({ children, className }: fadeUoBoxProps) => {
   const boxRef = useRef<HTMLDivElement | null>(null);
   const observer = useMemo(() => {
     return new IntersectionObserver((entries) => {
@@ -44,3 +44,5 @@ export const FadeUpBox = ({ children, className }: fadeUoBoxProps) => {
     </div>
   );
 };
+
+export default FadeUpBox;
