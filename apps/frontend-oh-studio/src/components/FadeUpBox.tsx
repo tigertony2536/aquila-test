@@ -1,8 +1,8 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { cn } from '../../utils/src';
-import { useEffect, useRef } from 'react';
+import { cn } from '../../../../packages/utils/src';
+import { useEffect, useRef, useMemo } from 'react';
 
 interface fadeUoBoxProps {
   children: ReactNode;
@@ -15,20 +15,22 @@ const observerOptions = {
   rootMargin: '-50px'
 };
 
-const FadeUpBox = ({ children, className }: fadeUoBoxProps) => {
+export const FadeUpBox = ({ children, className }: fadeUoBoxProps) => {
   const boxRef = useRef<HTMLDivElement | null>(null);
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('transform-none', 'opacity-100');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+  const observer = useMemo(() => {
+    return new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('transform-none', 'opacity-100');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+  }, []);
 
   useEffect(() => {
     if (boxRef.current) observer.observe(boxRef.current);
-  }, []);
+  }, [observer]);
 
   return (
     <div
@@ -42,5 +44,3 @@ const FadeUpBox = ({ children, className }: fadeUoBoxProps) => {
     </div>
   );
 };
-
-export default FadeUpBox;

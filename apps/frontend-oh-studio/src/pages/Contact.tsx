@@ -1,5 +1,5 @@
 import { Contact } from '../components';
-import { FadeUpBox } from '@repo/ui';
+import { FadeUpBox } from '../components/FadeUpBox';
 
 const ContactPage = () => {
   return (

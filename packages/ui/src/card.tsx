@@ -1,4 +1,4 @@
-function Card({
+export const Card = ({
   className,
   title,
   children,
@@ -8,7 +8,7 @@ function Card({
   title: string;
   children: React.ReactNode;
   href: string;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <a
       className={className}
@@ -22,6 +22,6 @@ function Card({
       <p>{children}</p>
     </a>
   );
-}
+};
 
 export default Card;

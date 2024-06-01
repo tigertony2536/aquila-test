@@ -1,6 +1,6 @@
-import Button from './Button';
-import Card from './Card';
+import { Bar } from './Bar';
+import { Button } from './Button';
+import { Card } from './Card';
+import { Code } from './Code';
 
-import FadeUpBox from './FadeUpBox';
-
-export { Button, Card,  FadeUpBox };
+export { Bar, Button, Card, Code };

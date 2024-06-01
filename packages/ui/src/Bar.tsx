@@ -6,12 +6,10 @@ interface BarProps {
   containerClass?: string;
 }
 
-const Bar = ({ containerClass, children }: BarProps) => {
+export const Bar = ({ containerClass, children }: BarProps) => {
   return (
     <div className={cn(`flex gap-2  rounded-full p-1`, containerClass)}>
       {children}
     </div>
   );
 };
-
-export default Bar;

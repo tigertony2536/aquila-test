@@ -1,4 +1,4 @@
-import { Bar } from '@repo/ui';
+import { Bar } from '@repo/ui/Bar';
 import { NavLink } from 'react-router-dom';
 
 interface navigationProps {

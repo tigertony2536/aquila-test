@@ -8,7 +8,7 @@ interface ButtonProps {
   onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-const Button = ({ children, className, onClick }: ButtonProps) => {
+export const Button = ({ children, className, onClick }: ButtonProps) => {
   const baseClass = 'py-2 px-6 rounded-full cursor-pointer z-20 text-nowrap';
   const supplementaryClass = className;
   return (
@@ -17,5 +17,3 @@ const Button = ({ children, className, onClick }: ButtonProps) => {
     </button>
   );
 };
-
-export default Button;
