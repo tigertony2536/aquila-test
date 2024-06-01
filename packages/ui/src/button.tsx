@@ -1,5 +1,5 @@
 // 'use client';
-
+import React, { FC } from 'react';
 import { ReactNode } from 'react';
 import { cn } from '@repo/utils';
 interface ButtonProps {
@@ -8,7 +8,11 @@ interface ButtonProps {
   onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-export const Button = ({ children, className, onClick }: ButtonProps) => {
+export const Button: FC<ButtonProps> = ({
+  children,
+  className,
+  onClick
+}: ButtonProps) => {
   const baseClass = 'py-2 px-6 rounded-full cursor-pointer z-20 text-nowrap';
   const supplementaryClass = className;
   return (

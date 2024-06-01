@@ -1,3 +1,4 @@
+import React, { FC } from 'react';
 import { ReactNode } from 'react';
 import { cn } from '../../utils/src';
 
@@ -6,7 +7,7 @@ interface BarProps {
   containerClass?: string;
 }
 
-export const Bar = ({ containerClass, children }: BarProps) => {
+export const Bar: FC<BarProps> = ({ containerClass, children }: BarProps) => {
   return (
     <div className={cn(`flex gap-2  rounded-full p-1`, containerClass)}>
       {children}
