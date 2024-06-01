@@ -10,14 +10,8 @@
     "./code": "./src/code.tsx"
   },
   "scripts": {
-    "prebuild": "pnpm -r run build",
-    "build": "tsc && vite build",
-    "dev": "vite",
-    "lint": "eslint . --max-warnings 0",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "generate:component": "turbo gen react-component"
+    "build": "tsc",
+    "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
