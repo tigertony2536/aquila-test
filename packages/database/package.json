@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "exports": {
-    ".": "./src/client.ts",
+    "./client": "./src/client.ts",
     "./prisma/prisma.schema": "./src/prisma/schema.prisma"
   },
   "scripts": {

@@ -1,4 +1,5 @@
-import { Bar, Button } from '@repo/ui';
+import { Button } from '@repo/ui';
+import Bar from '@repo/ui/Bar';
 import { Contact, Gallery } from '../components';
 import { FadeUpBox } from '@repo/ui';
 

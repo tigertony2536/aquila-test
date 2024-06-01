@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import { Request, Response } from 'express';
 import { solveTF } from './solve.ts';
 import { stringToNum, isFourNumbers } from './utilities.ts';
-import { getSolFromDb, CreateSolutions } from '@repo/database';
+import { getSolFromDb, CreateSolutions } from '@repo/database/client';
 
 dotenv.config();
 
