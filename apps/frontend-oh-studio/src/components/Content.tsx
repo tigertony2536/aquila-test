@@ -1,5 +1,5 @@
-import { Button } from '@repo/ui/Button';
-import { Bar } from '@repo/ui/Bar';
+import { Button } from '@repo/ui/button';
+import { Bar } from '@repo/ui/bar';
 import { Contact, Gallery } from '../components';
 import { FadeUpBox } from './FadeUpBox';
 

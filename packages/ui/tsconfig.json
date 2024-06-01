@@ -2,7 +2,9 @@
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "moduleResolution": "NodeNext",
+
   },
   "include": ["src", "../../apps/frontend-oh-studio/src/components/FadeUpBox.tsx"],
   "exclude": ["node_modules", "dist"]

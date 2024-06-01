@@ -1,6 +1,6 @@
-import { Bar } from './Bar';
-import { Button } from './Button';
-import { Card } from './Card';
-import { Code } from './Code';
+import { Bar } from './bar';
+import { Button } from './button';
+import { Card } from './card';
+import { Code } from './code';
 
 export { Bar, Button, Card, Code };
