@@ -20,11 +20,9 @@
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
-    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "react": "^18.2.0",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.0"
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "@repo/eslint-config": "workspace:*",
