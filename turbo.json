@@ -1,18 +1,33 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDotEnv": ["DATABASE_URL"],
   "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
+    "start": { "dependsOn": ["generate"], "dotEnv": [".env.local"] },
+    "preDev": {},
     "dev": {
+      "dotEnv": [
+        ".env.development.local",
+        ".env.development",
+        ".env.local",
+        ".env"
+      ],
       "cache": false,
       "persistent": true
     },
-    "test": {}
+    "clean": { "dependsOn": ["^clean"] },
+    "build": {
+      "dotEnv": [
+        ".env.production.local",
+        ".env.production",
+        ".env.local",
+        ".env"
+      ],
+      "dependsOn": ["clean", "^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "test": { "dependsOn": ["^build"] },
+    "deploy": { "dependsOn": ["lint", "^build", "test"] },
+    "generate": { "dependsOn": ["^generate"] }
   }
 }

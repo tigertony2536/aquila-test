@@ -1,22 +1,9 @@
-import { PrismaClient, TFgame } from '@prisma/client';
-import dotenv from 'dotenv';
+import { PrismaClient } from '@prisma/client';
 
-dotenv.config();
+declare global {
+  var prisma: PrismaClient | undefined;
+}
 
-const prisma = new PrismaClient();
+export const prisma = global.prisma || new PrismaClient();
 
-export const getSolFromDb = async (
-  numbers: string
-): Promise<string[] | undefined> => {
-  const result = await prisma.tFgame.findFirst({ where: { numbers: numbers } });
-  return result?.solutions;
-};
-
-type TFdata = Omit<TFgame, 'id'>;
-
-export const CreateSolutions = async (numberSol: TFdata) => {
-  const result = await prisma.tFgame.create({
-    data: { numbers: numberSol.numbers, solutions: numberSol.solutions }
-  });
-  return result;
-};
+if (process.env.NODE_ENV !== 'production') global.prisma = prisma;

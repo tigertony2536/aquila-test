@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { ReactNode } from 'react';
-import { cn } from '../../utils/src';
+import { cn } from '../../utils/src/index.js';
 
 interface BarProps {
   children: ReactNode;

@@ -5,7 +5,7 @@ import {
   allExpArrToString,
   evalExpression,
   addParentheses
-} from './utilities.ts';
+} from './utilities.js';
 
 export const solveTF = (numArr: number[]) => {
   //Find all possible permutations of operands and combinations of operators

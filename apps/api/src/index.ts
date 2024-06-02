@@ -1,14 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { Request, Response } from 'express';
-import { solveTF } from './solve.ts';
-import { stringToNum, isFourNumbers } from './utilities.ts';
-import { getSolFromDb, CreateSolutions } from '@repo/database/client';
+import { solveTF } from './solve.js';
+import { stringToNum, isFourNumbers } from './utilities.js';
+import { getSolFromDb, CreateSolutions } from '@repo/database';
 
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.API_PORT || '8000';
 
 app.get('/cheat24?', async (req: Request, res: Response) => {
   const number = req.query.number;

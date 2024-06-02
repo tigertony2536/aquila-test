@@ -4,10 +4,9 @@
   "description": "24 game using express api server",
   "type": "module",
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
     "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
-    "lint": "eslint . --no-error-on-unmatched-pattern --max-warnings 0",
+    "lint": "eslint . --ext *.js,.ts",
+    "clean": "tsc --build --clean",
     "build": "tsc",
     "start": "node dist/index.js"
   },

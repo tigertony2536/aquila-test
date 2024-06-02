@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --max-warnings 0",
+    "clean": "tsc --build --clean",
+    "start": "vite serve",
+    "lint": "eslint . --ext *.js,.ts",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"

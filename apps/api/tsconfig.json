@@ -1,15 +1,16 @@
 {
   // We extend it from here!
-  "extends": "@repo/typescript-config/base.json",
+  "extends": "@repo/typescript-config/tsconfig.node.json",
 
   // You can specify your own include/exclude
   "include": ["**/*.ts", "**/*.tsx", "src/*.ts"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "sourceMap": true,
-    "outDir": "${workspaceFolder}/.dist",
-    "noEmit": true,
-    "module": "NodeNext",
-    "allowImportingTsExtensions": true
+    "outDir": "dist"
+    // "noEmit": true,
+    // "module": "NodeNext",
+    // "moduleResolution": "NodeNext"
+    // "allowImportingTsExtensions": true
   }
 }

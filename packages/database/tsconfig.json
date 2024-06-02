@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/typescript-config/next.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tsup.config.ts"],
+  "extends": "@repo/typescript-config/tsconfig.node.json",
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "tsup.config.ts"],
   "exclude": ["node_modules"]
 }
