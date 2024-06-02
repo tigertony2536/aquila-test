@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts",
-    "./bar": "./src/bar.tsx",
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    ".": "./src/index.js",
+    "./bar": "./src/bar.jsx",
+    "./button": "./src/button.jsx",
+    "./card": "./src/card.jsx",
+    "./code": "./src/code.jsx"
   },
   "scripts": {
     "build": "tsc",
