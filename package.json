@@ -10,7 +10,7 @@
     "dev": "dotenv -- turbo run dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "is-ci || husky",
+    "prepare": "husky install",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "start": "turbo run start",
