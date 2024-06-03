@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "pnpm install --production=false && pnpm run build && npm prune --production",
-    "build": "pnpm run prebuild && tsc && vite build",
+    "build": "pnpm install && tsc && vite build",
     "clean": "tsc --build --clean",
     "start": "vite serve",
     "lint": "eslint . --ext *.js,.ts",
