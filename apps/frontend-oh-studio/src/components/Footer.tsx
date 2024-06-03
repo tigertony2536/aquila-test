@@ -1,5 +1,4 @@
-import { Bar } from '@repo/ui/bar';
-import { Button } from '@repo/ui/button';
+import { Bar, Button } from '@repo/ui';
 import Logo from './Logo/Logo';
 
 const barItems = [

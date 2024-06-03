@@ -4,15 +4,9 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.js",
-    "./bar": "./src/bar.jsx",
-    "./button": "./src/button.jsx",
-    "./card": "./src/card.jsx",
-    "./code": "./src/code.jsx"
+    ".": "./src/index.ts"
   },
   "scripts": {
-    "prebuild": "pnpm install --production=false && pnpm run build && npm prune --production",
-    "build": "pnpm run prebuild && tsc && vite build",
     "lint": "eslint . --ext *.js,.ts"
   },
   "devDependencies": {

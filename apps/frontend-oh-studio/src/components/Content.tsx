@@ -1,5 +1,4 @@
-import { Button } from '@repo/ui/button';
-import { Bar } from '@repo/ui/bar';
+import { Button, Bar } from '@repo/ui';
 import { Contact, Gallery, FadeUpBox } from '../components';
 
 const tagItems = [
