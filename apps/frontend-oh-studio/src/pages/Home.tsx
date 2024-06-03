@@ -1,5 +1,5 @@
 import { Content } from '../components';
-import { Button } from '@repo/ui/button';
+import { Button } from '@repo/ui';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons';
 
