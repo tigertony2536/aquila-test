@@ -13,7 +13,8 @@
         ".env"
       ],
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "dependsOn": ["^build"]
     },
     "clean": { "dependsOn": ["^clean"] },
     "build": {

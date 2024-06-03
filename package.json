@@ -6,7 +6,6 @@
     "seed": "tsx packages/database/src/seed.ts"
   },
   "scripts": {
-    "prebuild": "pnpm install --include=dev",
     "build": "turbo run build",
     "dev": "dotenv -- turbo run dev",
     "lint": "turbo lint",
