@@ -151,6 +151,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@tsconfig/vite-react':
+        specifier: ^3.0.2
+        version: 3.0.2
       '@types/react':
         specifier: ^18.2.66
         version: 18.3.3
@@ -1081,6 +1084,9 @@ packages:
 
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
+
+  '@tsconfig/vite-react@3.0.2':
+    resolution: {integrity: sha512-AFynAtE1Un3Rko20Ghe2mVC/QWD4rStJ2PnyIZU2kzC4UyWpf1YhAEY87GojH/XPZCY8Mdt27gsYyy+6l6HV+w==}
 
   '@turbo/gen@1.13.3':
     resolution: {integrity: sha512-l+EM1gGzckFMaaVQyj3BVRa0QJ+tpp8HfiHOhGpBWW3Vc0Hfj92AY87Di/7HGABa+HVY7ueatMi7DJG+zkJBYg==}
@@ -5082,6 +5088,8 @@ snapshots:
   '@tsconfig/node14@1.0.3': {}
 
   '@tsconfig/node16@1.0.4': {}
+
+  '@tsconfig/vite-react@3.0.2': {}
 
   '@turbo/gen@1.13.3(@swc/core@1.5.24)(@types/node@20.13.0)(typescript@5.4.5)':
     dependencies:
