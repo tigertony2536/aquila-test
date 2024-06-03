@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "installCommand": "pnpm install --include=dev"
+      }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
+}
