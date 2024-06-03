@@ -11,7 +11,8 @@
     "./code": "./src/code.jsx"
   },
   "scripts": {
-    "build": "pnpm install && tsc && vite build",
+    "prebuild": "pnpm install --production=false && pnpm run build && npm prune --production",
+    "build": "pnpm run prebuild && tsc && vite build",
     "lint": "eslint . --ext *.js,.ts"
   },
   "devDependencies": {

@@ -21,7 +21,8 @@
     "format": "prisma format",
     "generate": "dotenv -e .env.local -- prisma generate",
     "lint": "eslint . --ext *.js,.ts",
-    "build": "pnpm install && pnpm run generate && tsup",
+    "prebuild": "pnpm install --production=false && pnpm run build && npm prune --production",
+    "build": "pnpm run prebuild && pnpm run generate && tsup",
     "clean": "rimraf dist"
   },
   "dependencies": {
