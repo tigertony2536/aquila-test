@@ -16,3 +16,9 @@ This repository use turborepo as a build system including frontend projects to i
 
 1. Send Get request to http://localhost:8000/cheat24?number=<4 number>
 2. You will get array of all possible solutions as Json
+
+## Set up Project
+1. Clone this project
+2. Install dependencies using `pnpm install`
+3. Create .env file for database package including your DATABASE_URL and API_PORT
+4. Run projects `pnpm run dev`
