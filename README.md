@@ -1,8 +1,6 @@
-# Turborepo starter
-
 # Oh Studio SPA and 24game Apps
 
-This repository use turborepo as a build system including frontend projects to imitate Oh studio project from https://www.frontendpractice.com/projects/oh-studio and simple 24 game created using expressJS
+This repository use turborepo as a build system including frontend projects using React TyptScript to imitate Oh studio project from https://www.frontendpractice.com/projects/oh-studio and simple 24 game created using Express.js
 
 ## Oh Studio Web App
 
@@ -14,7 +12,7 @@ This repository use turborepo as a build system including frontend projects to i
 
 ### How to play
 
-1. Send Get request to http://localhost:8000/cheat24?number=<4 number>
+1. Send Get request to http://localhost:<API_PORT>/cheat24?number=<4 number>
 2. You will get array of all possible solutions as Json
 
 ## Set up Project
